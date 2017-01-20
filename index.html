@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Untitled</title>
+
+</head>
+<body>
+	<script type="text/javascript">
+	var dataFile = test.txt;
+ 
+function Start() {
+ 
+    var returnChar = "\n"[0];
+    var commaChar = ","[0];
+ 
+    var dataLines = dataFile.text.Split(returnChar);
+    var buildDataPairs = new ArrayList();
+ 
+    for (var dataLine in dataLines) {
+        var dataPair = dataLine.Split(commaChar);
+        buildDataPairs.Add(dataPair);
+    }
+    var dataPairs = buildDataPairs.ToArray();
+ 
+    Debug.Log(dataPairs[2][1]);  // prints "fish"
+    Debug.Log(dataPairs[3][0]);  // prints "goat"
+ 
+}
+</script>
+</body>
+</html>
